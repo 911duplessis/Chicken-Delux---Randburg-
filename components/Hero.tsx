@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(255,122,26,0.25),_transparent_60%)]"
       />
       <Image
-        src="/logo.png"
+        src={withBasePath("/logo.png")}
         alt="Chicken Delux — Premium BBQ Chicken, Randburg"
         width={340}
         height={227}
